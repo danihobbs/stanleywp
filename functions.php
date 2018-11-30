@@ -122,3 +122,8 @@ require get_template_directory() . '/plugin-activation/install-plugins.php';
  * Metaboxes
  */
 require get_template_directory() . '/inc/metaboxes.php';
+
+/**
+ * Custom post types
+ */
+require get_template_directory() . '/inc/cpt-setting.php';
