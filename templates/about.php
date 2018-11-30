@@ -39,5 +39,23 @@ get_header(); ?>
 		</div><!-- .row -->
 	</div><!-- .container -->
 </div><!-- .about -->
+<?php 
+	$leftcol = get_post_meta( get_the_ID(), '_stanleywp_left', true );
+	$rightcol = get_post_meta( get_the_ID(), '_stanleywp_right', true );
+?>
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<?php
+			echo wp_kses_post( $leftcol );
+			?>	
+		</div>
+		<div class="col-md-6">
+			<?php
+			echo wp_kses_post( $rightcol );
+			?>
+		</div>
+	</div>
+</div>
 <?php
 get_footer();
